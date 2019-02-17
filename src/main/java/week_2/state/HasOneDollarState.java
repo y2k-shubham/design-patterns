@@ -18,6 +18,7 @@ public class HasOneDollarState implements IState {
     public void insertDollar(VendingMachine vendingMachine) {
         System.out.println("Already have one dollar");
         vendingMachine.doReturnMoney();
+        vendingMachine.setState(vendingMachine.getIdleState());
     }
 
     @Override
